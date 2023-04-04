@@ -1,0 +1,30 @@
+import { GUI } from
+"https://cdn.skypack.dev/dat.gui@0.7.9"
+
+const CIRCLE_PATH = document.querySelector('#circlePath')
+const TEXT_PATH = document.querySelector('#textPath')
+const TEXT = document.querySelector('#text')
+
+const OPTIONS = {
+    text: "The Matt Web's !*&nbsp;",
+    size: 12,
+    radius: 20,
+    showPath: true,
+    spread: false,
+    inside: false
+}
+
+const CTRL = new GUI()
+
+const VIEWBOX = 100
+
+const onUpdate = () => {
+
+    TEXT.setAttribute('font-size', OPTIONS.size)
+    const PATH = 
+    M ${VIEWBOX * 0.5 - OPTIONS.radius}, {VIEWBOX * 0.5}
+    a ${OPTIONS.radius}, ${OPTIONS.radius} 0 1,${OPTIONS.inside ? 0 : 1 }
+    ${OPTIONS.radius * 2 
+    }, 0
+
+}
